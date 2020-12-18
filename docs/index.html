@@ -134,13 +134,13 @@
                     n && (e = "(" + n[2] + " / " + n[4] + ") " + n[1]), document.getElementById("message").innerHTML = e
                 },
                 monitorRunDependencies: function(e) {
-                    e < Module.lastDependencies && (Module.doneDependencies += 1), Module.lastDependencies = e, total = Module.totalDependencies, doing = Module.doneDependencies + 1, doing > total && (doing = total), document.getElementById("title").innerHTML = "(" + doing + " / " + total + ") Loading ...", document.getElementById("message").innerHTML = "Preparing game ..."
+                    e < Module.lastDependencies && (Module.doneDependencies += 1), Module.lastDependencies = e, total = Module.totalDependencies, doing = Module.doneDependencies + 1, doing > total && (doing = total), document.getElementById("title").innerHTML = "(" + doing + " / " + total + ") 불러오는중 ...", document.getElementById("message").innerHTML = "게임 준비중 ..."
                 },
                 onExit: function() {
                     document.getElementById("canvas").style.display = "none", document.getElementById("title").innerHTML = "Thank you for playing!", document.getElementById("message").innerHTML = "We hope you enjoyed OpenTTD!<br/><br/>Reload your browser to restart the game."
                 },
                 onAbort: function() {
-                    document.getElementById("canvas").style.display = "none", document.getElementById("box").className = "error", document.getElementById("title").innerHTML = "Crash :(", document.getElementById("message").innerHTML = "The game crashed!<br/><br/>Please reload your browser to restart the game."
+                    document.getElementById("canvas").style.display = "none", document.getElementById("box").className = "error", document.getElementById("title").innerHTML = "Crash :(", document.getElementById("message").innerHTML = "게임 충돌!<br/><br/>게임을 재시작하려면 브라우저를 재시작해 주세요."
                 },
                 onWarningFs: function() {
                     document.getElementById("filesystem").style.display = "inline-block", document.getElementById("overlay").style.opacity = 1, setTimeout((function() {
